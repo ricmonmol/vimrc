@@ -1,6 +1,4 @@
-"-------------------------------- GENERAL -----------------------------------;
-
-set nocompatible              " be iMproved, required;
+set nocompatible              " be iMproved, required
 syntax on
 set number
 set cursorline
@@ -8,47 +6,53 @@ set tabstop=4
 set ignorecase
 set hlsearch
 set background=dark
+set mouse=a
 let base16colorspace=256  " Access colors present in 256 colorspace
 
 map <C-c> "+y
 
-filetype off                  " required;
-"VUNDLE;
-set rtp+=~/.vim/bundle/Vundle.vim
+filetype off                  " required
 
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-	Plugin 'VundleVim/Vundle.vim'
-	Plugin 'sheerun/vim-polyglot'
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+    Plugin 'VundleVim/Vundle.vim'
+    Plugin 'sheerun/vim-polyglot'
 	Plugin 'preservim/nerdtree'
 	Plugin 'neoclide/coc.nvim', {'branch':'release'}
 	let g:coc_global_extensions = [
-        \'coc-tsserver',
-        \'coc-snippets',
-        \'coc-prettier',
-        \'coc-json',
-        \'coc-jest',
-        \'coc-html',
-        \'coc-eslint',
-        \'coc-toml',
-        \'coc-css'
-        \]
-	Plugin 'itchyny/lightline.vim'
-    Plugin 'pangloss/vim-javascript'    " JavaScript support;
-    Plugin 'leafgarland/typescript-vim' " TypeScript syntax;
-    Plugin 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax;
-    Plugin 'chriskempson/base16-vim'
-call vundle#end()
-
-filetype plugin indent on    " required;
-" To ignore plugin indent changes, instead use:;
-"filetype plugin on;
-";
-" Brief help;
-" :PluginList       - lists configured plugins;
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate;
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache;
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal;
-
+       \'coc-tsserver',
+       \'coc-snippets',
+       \'coc-prettier',
+       \'coc-json',
+       \'coc-jest',
+       \'coc-html',
+       \'coc-eslint',
+       \'coc-toml',
+       \'coc-css'
+       \]
+	Plugin 'chriskempson/base16-vim'
+" Keep Plugin commands between vundle#begin/end.
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+"
+"
 
 "-------------------- COC ----------------------------------------;
 ";
